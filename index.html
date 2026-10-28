@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FFD93D">
+
+  <!-- ═══════ سئو (SEO) ═══════ -->
+  <title>بانانا کوییز 🍌 | بازی کوییز آنلاین فارسی — کوییز موز</title>
+  <meta name="description" content="بانانا کوییز 🍌 — بازی کوییز آنلاین فارسی با ۸۴۰ سؤال در فوتبال، والیبال، بسکتبال، گیم، اطلاعات عمومی، زبان انگلیسی و ریاضی. ۱۵ سؤال، تایمر، پروندهٔ رنک موزی، ایکس‌پی، آواتار تمام‌قد قابل چرخش، فروشگاه لباس، پارتی تا ۱۰ نفر و تایپ‌بتل. ساختهٔ محمد مهدی عدالتیان.">
+  <meta name="keywords" content="بانانا کوییز, کوییز موز, banana quiz, بازی کوییز, کوییز آنلاین, کوییز فارسی, بازی کوییز آنلاین, سوالات فوتبال, سوالات والیبال, سوالات بسکتبال, سوالات گیم, کوییز ریاضی, کوییز زبان انگلیسی, اطلاعات عمومی, آزمون آنلاین, تایپ بتل, پارتی آنلاین, ایکس‌پی, آواتار, کوییز موزی">
+  <meta name="author" content="محمد مهدی عدالتیان">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="W0X-_dUBAq4FoXCPMvNoxVKp32xB2efn2ET-RFwCxFA" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="بانانا کوییز">
+  <meta property="og:title" content="بانانا کوییز 🍌 — کوییز آنلاین فارسی با آواتار، ایکس‌پی و تایپ‌بتل">
+  <meta property="og:description" content="۸۴۰ سؤال در ۷ دسته؛ آواتار تمام‌قد بچرخون، با ایکس‌پی لباس بخر، تا ۱۰ نفر پارتی بگذار و تایپ‌بتل بنداز!">
+  <meta property="og:locale" content="fa_IR">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="بانانا کوییز 🍌 — کوییز آنلاین فارسی">
+  <meta name="twitter:description" content="۸۴۰ سؤال در ۷ دسته؛ با آواتار تمام‌قد، ایکس‌پی، فروشگاه لباس، پارتی و تایپ‌بتل!">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "بانانا کوییز",
+    "alternateName": ["کوییز موز", "Banana Quiz", "بانانا کوییز آنلاین"],
+    "url": "/",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "inLanguage": "fa",
+    "description": "بازی کوییز آنلاین فارسی با ۸۴۰ سؤال در ۷ دستهٔ ورزشی و عمومی؛ ۱۵ سؤال تصادفی در هر بازی، تایمر، پروندهٔ رنک موزی، سیستم ایکس‌پی، آواتار تمام‌قد قابل چرخش، فروشگاه لباس، پارتی آنلاین تا ۱۰ نفر و تایپ‌بتل.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "IRR" },
+    "author": { "@type": "Person", "name": "محمد مهدی عدالتیان" }
+  }
+  </script>
+  <!-- ═══════ پایان سئو ═══════ -->
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍌</text></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- ═══════════ صفحهٔ ورود ═══════════ -->
+    <section id="screen-entry" class="screen">
+      <div class="center-head">
+        <div class="logo big wiggle">🍌</div>
+        <h1 class="title">کوییز موز</h1>
+        <p class="subtitle">برای ورود، شناسنامه‌ات را پر کن!</p>
+      </div>
+      <div class="card entry-card">
+        <label for="player-name">نام شما</label>
+        <input id="player-name" type="text" placeholder="مثلاً: علی" maxlength="30" autocomplete="off">
+        <label for="player-nick">لقب موزی شما</label>
+        <input id="player-nick" type="text" placeholder="مثلاً: کاپیتان موز" maxlength="30" autocomplete="off">
+        <p class="field-hint">لقب باید به «موز» ختم شود 🍌</p>
+        <p id="entry-error" class="error hidden" role="alert"></p>
+        <button id="btn-enter" class="btn primary">ورود به کوییز 🍌</button>
+      </div>
+    </section>
+
+    <!-- ═══════════ صفحهٔ خانه ═══════════ -->
+    <section id="screen-home" class="screen">
+      <div class="center-head">
+        <div class="logo big wiggle">🍌</div>
+        <h1 class="title">کوییز موز</h1>
+        <div class="welcome-row">
+          <span id="home-avatar" class="home-avatar" aria-hidden="true"></span>
+          <span class="welcome">سلام <b id="home-name"></b> (<span id="home-nick"></span>) 👋</span>
+        </div>
+        <div class="xp-row">
+          <span class="chip xp-chip" id="home-xp">⭐ ۰ ایکس‌پی</span>
+          <span class="chip rank-chip" id="home-rank-badge">🟢 موز نارس</span>
+        </div>
+      </div>
+      <div class="card home-card">
+        <div class="best-score" id="home-best">🏆 هنوز رکوردی ثبت نشده</div>
+        <button id="btn-start" class="btn primary big-btn">شروع کوییز</button>
+        <button id="btn-party" class="btn party big-btn">🎉 پارتی با دوستان</button>
+        <div class="menu-grid">
+          <button id="btn-avatar" class="btn menu-btn">👤 شخصیت من</button>
+          <button id="btn-shop" class="btn menu-btn">🛍️ فروشگاه</button>
+          <button id="btn-voice" class="btn menu-btn menu-btn-wide">🎙️ ویس کال با دوستان</button>
+        </div>
+        <button id="btn-rejoin" class="btn ghost hidden">🚪 برگشت به روم <b id="rejoin-code"></b></button>
+        <button id="btn-logout" class="btn ghost">تغییر بازیکن</button>
+        <p class="rules">تا ۱۵ سؤال تصادفی • ۴ گزینه • ۱۵ ثانیه برای هر سؤال<br>سؤال‌های جواب‌داده‌شده تکرار نمی‌شوند؛ با تغییر اسم یا لقب، بانکت دوباره پر می‌شود 🍌<br>هر بازی ایکس‌پی داره؛ با اون آواتارت رو قشنگ‌تر کن! 👕👑</p>
+      </div>
+    </section>
+
+    <!-- ═══════════ صفحهٔ انتخاب دسته ═══════════ -->
+    <section id="screen-category" class="screen">
+      <div class="center-head">
+        <div class="logo wiggle">🗂️</div>
+        <h1 class="title">کدوم دسته؟</h1>
+        <p class="subtitle">یه دسته انتخاب کن؛ <b>۱۵ سؤال تصادفی</b> از اون دسته می‌گیری!</p>
+      </div>
+      <div class="cat-grid" id="cat-grid"></div>
+      <button id="btn-cat-back" class="btn ghost">بازگشت به خانه</button>
+    </section>
+
+    <!-- ═══════════ صفحهٔ سوال ═══════════ -->
+    <section id="screen-quiz" class="screen">
+      <div class="quiz-top">
+        <div class="chip score-chip">امتیاز: <b id="quiz-score">۰</b></div>
+        <div class="progress-text" id="quiz-progress">سؤال ۱ از ۱۵</div>
+        <div class="chip nick-chip" id="quiz-nick">🍌</div>
+      </div>
+      <div class="progress-bar" aria-hidden="true"><div id="progress-fill"></div></div>
+      <div class="timer-row">
+        <div class="timer-bar" aria-hidden="true"><div id="timer-fill"></div></div>
+        <div class="timer-chip">⏱ <b id="timer-num">۱۵</b></div>
+      </div>
+      <div class="card question-card" id="question-card">
+        <h2 id="question-text"></h2>
+        <div id="options"></div>
+        <p id="explanation" class="explanation hidden"></p>
+        <div id="next-hint" class="next-hint hidden">
+          <span id="next-hint-text">سؤال بعدی…</span>
+          <div class="next-fill"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ صفحهٔ پرونده (نتیجه) ═══════════ -->
+    <section id="screen-result" class="screen">
+      <div class="dossier">
+        <div class="dossier-tab">پروندهٔ بازیکن</div>
+        <div class="dossier-paper">
+          <span class="clip" aria-hidden="true">📎</span>
+          <span class="watermark" aria-hidden="true">🍌</span>
+          <div class="dossier-head">
+            <div class="file-no" id="file-no">شمارهٔ پرونده: MOZ-****</div>
+            <h2 class="dossier-title">🗂️ پروندهٔ عملکرد کوییز موز</h2>
+          </div>
+          <div class="rank-stamp r2" id="rank-stamp">موز رسیده 🍌</div>
+          <div class="rows">
+            <div class="row"><span class="label">نام و نام خانوادگی</span><span class="value" id="d-name">—</span></div>
+            <div class="row"><span class="label">لقب موزی</span><span class="value" id="d-nick">—</span></div>
+            <div class="row"><span class="label">تاریخ</span><span class="value" id="d-date">—</span></div>
+            <div class="row"><span class="label">دستهٔ سؤال‌ها</span><span class="value" id="d-cat">—</span></div>
+            <div class="row"><span class="label">پاسخ‌های درست</span><span class="value good" id="d-correct">—</span></div>
+            <div class="row"><span class="label">پاسخ‌های اشتباه</span><span class="value bad" id="d-wrong">—</span></div>
+            <div class="row"><span class="label">بدون پاسخ (اتمام وقت)</span><span class="value timeout" id="d-timeout">—</span></div>
+            <div class="row"><span class="label">امتیاز نهایی</span><span class="value score" id="d-score">—</span></div>
+            <div class="row"><span class="label">ایکس‌پی این بازی</span><span class="value" id="d-xp">—</span></div>
+            <div class="row"><span class="label">بهترین امتیاز (این دستگاه)</span><span class="value gold" id="d-best">—</span></div>
+          </div>
+          <p class="rank-msg" id="rank-msg"></p>
+          <details class="review">
+            <summary>🔎 جزئیات پاسخ‌ها</summary>
+            <ul id="review-list"></ul>
+          </details>
+          <div class="creator-stamp">تهیه‌کنندهٔ سایت<br><b>محمد مهدی عدالتیان</b></div>
+        </div>
+      </div>
+      <div class="result-actions">
+        <button id="btn-share" class="btn primary">اشتراک‌گذاری نتیجه 📤</button>
+        <button id="btn-again" class="btn secondary">دوباره 🔁</button>
+        <button id="btn-newplayer" class="btn ghost">بازیکن جدید</button>
+      </div>
+    </section>
+
+    <!-- ═══════════ پروفایل و شخصیت ═══════════ -->
+    <section id="screen-profile" class="screen">
+      <div class="center-head">
+        <div class="logo wiggle">👤</div>
+        <h1 class="title">شخصیت من</h1>
+      </div>
+      <div class="card profile-card">
+        <div class="profile-stage-wrap">
+          <div class="profile-stage" id="profile-stage" title="بکش تا بچرخه!">
+            <div class="stage-turn" id="profile-av"></div>
+          </div>
+          <div class="stage-ctrls">
+            <button id="btn-rot-right" class="stage-arrow" type="button" aria-label="چرخش به راست">↻</button>
+            <span class="stage-hint">بکش و بچرخونش! 👆</span>
+            <button id="btn-rot-left" class="stage-arrow" type="button" aria-label="چرخش به چپ">↺</button>
+          </div>
+        </div>
+        <div class="profile-meta-center">
+          <div class="profile-xp" id="profile-xp">⭐ ۰ ایکس‌پی</div>
+          <div class="profile-stats" id="profile-stats">۰ بازی • رکورد ۰</div>
+          <div class="profile-rank" id="profile-rank">🟢 موز نارس</div>
+        </div>
+        <div class="divider"></div>
+        <label for="profile-name">نام</label>
+        <input id="profile-name" type="text" maxlength="30" autocomplete="off">
+        <label for="profile-nick">لقب موزی</label>
+        <input id="profile-nick" type="text" maxlength="30" autocomplete="off">
+        <p class="field-hint">⚠️ با تغییر اسم یا لقب، سؤال‌های جواب‌داده‌شده‌ات دوباره پر می‌شود (مثل قبل!)</p>
+        <p id="profile-error" class="error hidden" role="alert"></p>
+        <button id="btn-profile-save" class="btn primary">ذخیرهٔ شناسنامه 💾</button>
+        <button id="btn-edit-avatar" class="btn secondary big-btn">🎨 ویرایش آواتار و فروشگاه</button>
+      </div>
+      <button id="btn-profile-back" class="btn ghost">بازگشت به خانه</button>
+    </section>
+
+    <!-- ═══════════ آواتار / فروشگاه ═══════════ -->
+    <section id="screen-avatar" class="screen">
+      <div class="center-head">
+        <div class="logo wiggle">🎨</div>
+        <h1 class="title" id="avatar-title">شخصیت‌سازی</h1>
+        <p class="subtitle">یه آیتم انتخاب کن — آیتم‌های قشنگ‌تر با ایکس‌پی باز می‌شوند!</p>
+      </div>
+      <div class="card avatar-card">
+        <div class="avatar-preview-row">
+          <div class="avatar-preview" id="av-preview"></div>
+          <div class="avatar-side">
+            <span class="chip xp-chip" id="av-xp">⭐ ۰ ایکس‌پی</span>
+            <p class="avatar-hint">آیتم‌های قفل‌شده قیمت دارند؛ با بازی‌کردن ایکس‌پی جمع کن! 🍌</p>
+          </div>
+        </div>
+        <div class="av-tabs" id="av-tabs"></div>
+        <div class="av-grid" id="av-items"></div>
+        <button id="btn-avatar-save" class="btn primary">تمام شد — ذخیره ✅</button>
+      </div>
+      <button id="btn-avatar-back" class="btn ghost">بازگشت</button>
+    </section>
+
+    <!-- ═══════════ پارتی: صفحهٔ اصلی روم ═══════════ -->
+    <section id="screen-party" class="screen">
+      <div class="center-head">
+        <div class="logo wiggle">🎉</div>
+        <h1 class="title">پارتی با دوستان</h1>
+        <p class="subtitle">روم بساز، کدش رو بده به رفیقات؛ هرکی رنک بالاتری گرفت برنده‌ست! 👑</p>
+      </div>
+      <div class="card party-card">
+        <button id="btn-room-create" class="btn primary big-btn">🏗️ ساخت روم جدید</button>
+        <div class="party-divider"><span>یا</span></div>
+        <label for="join-code">ورود با کد روم</label>
+        <input id="join-code" type="text" inputmode="numeric" placeholder="مثلاً ۴۸۲۱" maxlength="4" autocomplete="off" class="code-input">
+        <button id="btn-room-join" class="btn secondary big-btn">🚪 ورود به روم</button>
+        <p id="party-error" class="error hidden" role="alert"></p>
+        <p class="party-note">برای پارتی اینترنت لازمه 🌐 • ظرفیت هر روم <b>۱۰ نفر</b> • سؤال‌های پارتی از بانک شخصی‌ات کم نمی‌شه</p>
+      </div>
+      <button id="btn-party-back" class="btn ghost">بازگشت به خانه</button>
+    </section>
+
+    <!-- ═══════════ پارتی: لابی روم ═══════════ -->
+    <section id="screen-lobby" class="screen">
+      <div class="center-head">
+        <div class="logo wiggle">🚪</div>
+        <h1 class="title">لابی روم</h1>
+      </div>
+      <div class="card party-card">
+        <div class="room-code-box">
+          <span class="room-code-label">کد روم</span>
+          <div class="room-code" id="lobby-code">----</div>
+          <div class="room-code-actions">
+            <button id="btn-copy-code" class="btn tiny secondary">📋 کپی کد</button>
+            <button id="btn-share-code" class="btn tiny secondary">📤 فرستادن</button>
+          </div>
+        </div>
+        <p class="lobby-hint" id="lobby-hint">کد رو به دوستات بده تا بیان تو! 👇</p>
+        <div class="player-list" id="lobby-players"></div>
+        <div id="host-panel" class="host-panel hidden">
+          <label for="host-mode">🎮 حالت بازی</label>
+          <select id="host-mode" class="code-input">
+            <option value="quiz">📝 کوییز (۱۵ سؤال)</option>
+            <option value="battle">⌨️ تایپ‌بتل (مسابقهٔ تایپ)</option>
+          </select>
+          <div id="quiz-settings">
+            <label for="host-cat">دستهٔ سؤال‌های این دور</label>
+            <select id="host-cat" class="code-input"></select>
+          </div>
+          <div id="battle-settings" class="hidden">
+            <label for="host-rounds">⏱ تعداد راند (هر راند ۲۰ ثانیه)</label>
+            <select id="host-rounds" class="code-input">
+              <option value="1">۱ راند</option>
+              <option value="2">۲ راند</option>
+              <option value="3" selected>۳ راند</option>
+              <option value="4">۴ راند</option>
+              <option value="5">۵ راند</option>
+            </select>
+            <p class="field-hint">هر بازیکن ۳ جون ❤️ دارد؛ هر کلمهٔ غلط ۱ جون کم می‌کند! متن ۲۱ خطی است ⌨️</p>
+          </div>
+          <button id="btn-room-start" class="btn primary big-btn">🚀 شروع بازی</button>
+        </div>
+        <div id="guest-panel" class="guest-panel hidden">
+          <p class="waiting-line">⏳ منتظری که میزبان بازی رو شروع کنه…</p>
+        </div>
+        <p id="lobby-status" class="party-status"></p>
+        <button id="btn-lobby-leave" class="btn ghost">🚶 خروج از روم</button>
+      </div>
+    </section>
+
+    <!-- ═══════════ پارتی: تایپ‌بتل ═══════════ -->
+    <section id="screen-battle" class="screen">
+      <div class="battle-top">
+        <div class="chip" id="battle-round-chip">⌨️ راند ۱ از ۳</div>
+        <div class="chip lives-chip" id="battle-lives">❤️❤️❤️</div>
+      </div>
+      <div class="timer-row">
+        <div class="timer-bar" aria-hidden="true"><div id="battle-timer-fill"></div></div>
+        <div class="timer-chip">⏱ <b id="battle-timer-num">۲۰</b></div>
+      </div>
+      <div class="card battle-card">
+        <div class="battle-text-title" id="battle-text-title"></div>
+        <div class="battle-lines" id="battle-lines"></div>
+        <input id="battle-input" class="battle-input" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="این‌جا تایپ کن… ⌨️">
+        <p class="battle-status" id="battle-status"></p>
+      </div>
+      <div class="card battle-rivals">
+        <div class="battle-rivals-title">⚡ وضعیت زندهٔ مسابقه</div>
+        <div class="live-table" id="battle-live"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ پارتی: انتظار برای بقیه ═══════════ -->
+    <section id="screen-party-wait" class="screen">
+      <div class="center-head">
+        <div class="logo wiggle">🏁</div>
+        <h1 class="title">بازی تو تموم شد!</h1>
+        <p class="subtitle" id="wait-sub">منتظر بقیهٔ بازیکن‌ها…</p>
+      </div>
+      <div class="card party-card">
+        <div class="live-table" id="wait-table"></div>
+        <button id="btn-force-results" class="btn secondary hidden">🏁 نمایش نتایج نهایی</button>
+        <button id="btn-wait-leave" class="btn ghost">🚶 خروج از روم</button>
+      </div>
+    </section>
+
+    <!-- ═══════════ پارتی: جدول نتایج ═══════════ -->
+    <section id="screen-party-results" class="screen">
+      <div class="center-head">
+        <div class="logo wiggle">🏆</div>
+        <h1 class="title">نتایج پارتی</h1>
+        <p class="subtitle" id="results-sub"></p>
+      </div>
+      <div class="card party-card">
+        <div id="results-share-area">
+          <div class="results-head" id="results-head"></div>
+          <div class="winner-banner" id="winner-banner"></div>
+          <div class="results-table" id="results-table"></div>
+          <div class="share-brand">🍌 بانانا کوییز — ساختهٔ محمد مهدی عدالتیان</div>
+        </div>
+        <button id="btn-share-results" class="btn primary">📤 اشتراک‌گذاری نتایج (عکس)</button>
+        <button id="btn-party-again" class="btn secondary hidden">🔄 دور جدید</button>
+        <button id="btn-results-leave" class="btn ghost">🚶 خروج از روم</button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ═══════════ انتخاب رشتهٔ ورزشی ═══════════ -->
+  <div id="sports-modal" class="modal-overlay hidden">
+    <div class="modal sports-box">
+      <h2>🏅 کدوم رشتهٔ ورزشی؟</h2>
+      <p class="captcha-sub">هر رشته ۱۲۰ سؤال اختصاصی داره!</p>
+      <div class="sports-grid" id="sports-grid"></div>
+      <button id="sports-cancel" class="btn ghost">بی‌خیال</button>
+    </div>
+  </div>
+
+  <!-- ═══════════ کپچا: من ربات نیستم ═══════════ -->
+  <div id="captcha-modal" class="modal-overlay hidden">
+    <div class="modal captcha-box">
+      <h2>🤖 تأیید امنیتی</h2>
+      <p class="captcha-sub">قبل از ساختن یا ورود به روم، ثابت کن ربات نیستی!</p>
+      <label class="robot-check"><input type="checkbox" id="captcha-robot"><span>من ربات نیستم ✋</span></label>
+      <div class="math-row">
+        <span class="math-q" id="captcha-question">—</span>
+        <button id="captcha-refresh" type="button" class="btn tiny ghost" title="سؤال جدید">↻</button>
+      </div>
+      <input id="captcha-answer" type="text" inputmode="numeric" placeholder="جواب چندیه؟" autocomplete="off" class="code-input">
+      <p id="captcha-error" class="error hidden" role="alert"></p>
+      <button id="captcha-submit" class="btn primary">تایید و ادامه ✓</button>
+      <button id="captcha-cancel" class="btn ghost">بی‌خیال</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden" role="status"></div>
+
+  <!-- ═══════════ ویس کال (لایهٔ تمام‌صفحه) ═══════════ -->
+  <div id="voice-layer" class="voice-layer hidden"></div>
+
+  <button id="audio-toggle" type="button" title="موزیک بانانا">🔊</button>
+
+  <script src="questions.js"></script>
+  <script src="battle-texts.js"></script>
+  <script src="avatar.js"></script>
+  <script src="minigames.js"></script>
+  <script src="voice.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
